@@ -10,9 +10,6 @@ import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
-import java.util.logging.Level;
-import java.util.logging.LogManager;
-
 import static org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
@@ -25,10 +22,10 @@ public  class BaseIT {
 
 	@Container
 	public static PostgreSQLContainer<?> postgresDB = new PostgreSQLContainer<>("postgres:13.2")
-			                                     .withDatabaseName("eis")
-												 .withUsername("postgres")
-												 .withPassword("postgres")
-			                                     .withInitScript("ddl.sql");;
+																						 .withDatabaseName("eis")
+																						 .withUsername("postgres")
+																						 .withPassword("postgres")
+																						 .withInitScript("ddl.sql");
 
 
 	@DynamicPropertySource
