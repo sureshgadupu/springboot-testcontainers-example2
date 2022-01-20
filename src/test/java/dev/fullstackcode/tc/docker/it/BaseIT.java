@@ -25,7 +25,11 @@ public  class BaseIT {
 
 	@Container
 	public static PostgreSQLContainer<?> postgresDB = new PostgreSQLContainer<>("postgres:13.2")
-																						.withDatabaseName("eis");
+			                                     .withDatabaseName("eis")
+												 .withUsername("postgres")
+												 .withPassword("postgres")
+			                                     .withInitScript("ddl.sql");;
+
 
 	@DynamicPropertySource
 	public static void properties(DynamicPropertyRegistry registry) {

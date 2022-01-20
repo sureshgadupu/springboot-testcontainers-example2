@@ -1,5 +1,5 @@
 --select * from department;
-ALTER SEQUENCE hibernate_sequence RESTART WITH 1;
+
 DELETE FROM EMPLOYEE;
 DELETE FROM DEPARTMENT;
 
